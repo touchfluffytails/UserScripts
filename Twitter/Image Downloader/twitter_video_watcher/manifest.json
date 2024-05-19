@@ -1,0 +1,43 @@
+{
+	"manifest_version": 2,
+	"name": "Twitter Video Watcher",
+	"version": "1.0",
+
+	"description": "Monitor tweet videos",
+
+	"icons":
+	{
+		"48": "icons/border-48.png"
+	},
+	"browser_specific_settings":
+	{
+		"gecko":
+		{
+			"id": "touchfluffytail@touchfluffytail.pet",
+			"strict_min_version": "42.0"
+		}
+	},
+	"permissions": [
+		"activeTab",
+		"*://*.twitter.com/*",
+		"*://*.x.com/*",
+		"*://twitter.com/*",
+		"*://x.com/*",
+		"webRequest",
+		"<all_urls>" //,
+		// "background"
+	],
+	// "host_permissions": [
+	// 	"*://*.twitter.com/*",
+	// 	"*://twitter.com/*"
+	// ],
+	"content_scripts": [
+	{
+		"matches": ["*://*.twitter.com/*"],
+		"matches": ["*://*.x.com/*"],
+		"matches": ["*://twitter.com/*"],
+		"matches": ["*://x.com/*"],
+		"js": ["monitor.js"],
+		"run_at": "document_start"
+	}]
+}
