@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.3.1
+// @version      3.3.2
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -13,6 +13,8 @@
 // @resource    jqUI_CSS  http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css
 // @resource    IconSet1  http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/images/ui-icons_222222_256x240.png
 // @resource    IconSet2  http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/images/ui-icons_454545_256x240.png
+// @downloadURL https://raw.githubusercontent.com/touchfluffytails/UserScripts/main/Twitter/Image%20Downloader/twitter_download_images.js
+// @updateURL https://raw.githubusercontent.com/touchfluffytails/UserScripts/main/Twitter/Image%20Downloader/twitter_download_images.js
 // @grant       GM_addStyle
 // @grant       GM_getResourceText
 // @grant       GM_getResourceURL
