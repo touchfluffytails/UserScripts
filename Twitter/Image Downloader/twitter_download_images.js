@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.3.2
+// @version      3.4.0
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -570,6 +570,7 @@ if (typeof InstallTrigger === 'undefined')
 	const tweetButtonImage = "data:image/png;base64,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"
 	const DefaultMediaButton1Image = " data:image/png;base64,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"
 	const mediaButtonImage = " data:image/png;base64,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";
+	const DefaultCopyUrlButtonImage = " data:image/png;base64,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"
 
 
 	// input_button_1_colour
@@ -597,7 +598,10 @@ if (typeof InstallTrigger === 'undefined')
 
 	const DefaultConfiguration = {
 		UseDirectories: true,
+		Button1Toggle: true,
 		Button2Toggle: true,
+		CopyUrlToggle: true,
+		MediaButton1Toggle: true,
 		MediaButton2Toggle: true,
 
 		Button1Colour: "red",
@@ -606,7 +610,7 @@ if (typeof InstallTrigger === 'undefined')
 		Button1Height: "32px",
 		Button1Directory: "media/dwn/twitterNSFW/",
 
-		Button2Colour: "grey",
+		Button2Colour: "blue",
 		Button2Picture: tweetButtonImage,
 		Button2Width: "32px",
 		Button2Height: "32px",
@@ -623,13 +627,19 @@ if (typeof InstallTrigger === 'undefined')
 		MediaButton2Width: "50px",
 		MediaButton2Height: "50px",
 		MediaButton2Directory: "media/dwn/twitterSFW/",
+
+		CopyUrlColour: "grey",
+		CopyUrlPicture: DefaultCopyUrlButtonImage,
+		CopyUrlWidth: "32px",
+		CopyUrlHeight: "32px",
+		CopyUrlDomain: "vxtwitter",
 	}
 
 	const SettingMapping = {
 		UseDirectories: "input_use_save_dir",
-		Button2Toggle: "input_toggle_button_2",
 		MediaButton2Toggle: "input_toggle_media_button_2",
 
+		Button1Toggle: "input_toggle_button_1",
 		Button1Colour: "input_button_1_colour",
 		Button1Picture: "input_button_1_picture",
 		Button1Width: "input_button_1_width",
@@ -643,11 +653,13 @@ if (typeof InstallTrigger === 'undefined')
 		Button2Height: "input_button_2_height",
 		Button2Directory: "input_button_2_directory",
 
+		MediaButton1Toggle: "input_toggle_media_button_1",
 		MediaButton1Colour: "input_media_button_1_colour",
 		MediaButton1Picture: "input_media_button_1_picture",
 		MediaButton1Width: "input_media_button_1_width",
 		MediaButton1Height: "input_media_button_1_height",
 		MediaButton1Directory: "input_media_button_1_directory",
+
 		MediaButton2Toggle: "input_toggle_media_button_2",
 		MediaButton2Colour: "input_media_button_2_colour",
 		MediaButton2Picture: "input_media_button_2_picture",
@@ -655,6 +667,54 @@ if (typeof InstallTrigger === 'undefined')
 		MediaButton2Height: "input_media_button_2_height",
 		MediaButton2Directory: "input_media_button_2_directory",
 
+		CopyUrlToggle: "input_toggle_button_copyurl",
+		CopyUrlColour: "input_button_copyurl_colour",
+		CopyUrlPicture: "input_button_copyurl_picture",
+		CopyUrlWidth: "input_button_copyurl_width",
+		CopyUrlHeight: "input_button_copyurl_height",
+		CopyUrlDomain: "input_button_copyurl_domain",
+	}
+
+	const UICheckBoxes = {
+		UseDirectories: "input_use_save_dir",
+		MediaButton2Toggle: "input_toggle_media_button_2",
+		Button1Toggle: "input_toggle_button_1",
+		Button2Toggle: "input_toggle_button_2",
+		MediaButton1Toggle: "input_toggle_media_button_1",
+		MediaButton2Toggle: "input_toggle_media_button_2",
+		CopyUrlToggle: "input_toggle_button_copyurl",
+	}
+
+	const UITextBoxes = {
+		Button1Colour: "input_button_1_colour",
+		Button1Picture: "input_button_1_picture",
+		Button1Width: "input_button_1_width",
+		Button1Height: "input_button_1_height",
+		Button1Directory: "input_button_1_directory",
+
+		Button2Colour: "input_button_2_colour",
+		Button2Picture: "input_button_2_picture",
+		Button2Width: "input_button_2_width",
+		Button2Height: "input_button_2_height",
+		Button2Directory: "input_button_2_directory",
+
+		MediaButton1Colour: "input_media_button_1_colour",
+		MediaButton1Picture: "input_media_button_1_picture",
+		MediaButton1Width: "input_media_button_1_width",
+		MediaButton1Height: "input_media_button_1_height",
+		MediaButton1Directory: "input_media_button_1_directory",
+
+		MediaButton2Colour: "input_media_button_2_colour",
+		MediaButton2Picture: "input_media_button_2_picture",
+		MediaButton2Width: "input_media_button_2_width",
+		MediaButton2Height: "input_media_button_2_height",
+		MediaButton2Directory: "input_media_button_2_directory",
+
+		CopyUrlColour: "input_button_copyurl_colour",
+		CopyUrlPicture: "input_button_copyurl_picture",
+		CopyUrlWidth: "input_button_copyurl_width",
+		CopyUrlHeight: "input_button_copyurl_height",
+		CopyUrlDomain: "input_button_copyurl_domain",
 	}
 
 	const VideoType = {
@@ -675,68 +735,23 @@ if (typeof InstallTrigger === 'undefined')
 
 	async function GetButtonSettings()
 	{
-		let value;
+		let settingValue;
 		let settings = {};
 
-		value = await GM.getValue("input_use_save_dir", DefaultConfiguration.UseDirectories);
-		settings["UseDirectories"] = value;
-		value = await GM.getValue("input_button_1_colour", DefaultConfiguration.Button1Colour);
-		settings["Button1Colour"] = value;
-		value = await GM.getValue("input_button_1_picture", DefaultConfiguration.Button1Picture);
-		settings["Button1Picture"] = value;
-		value = await GM.getValue("input_button_1_width", DefaultConfiguration.Button1Width);
-		settings["Button1Width"] = value;
-		value = await GM.getValue("input_button_1_height", DefaultConfiguration.Button1Height);
-		settings["Button1Height"] = value;
-		value = await GM.getValue("input_button_1_directory", DefaultConfiguration.Button1Directory);
-		settings["Button1Directory"] = value;
-		value = await GM.getValue("input_toggle_button_2", DefaultConfiguration.Button2Toggle);
-		settings["Button2Toggle"] = value;
-		value = await GM.getValue("input_button_2_colour", DefaultConfiguration.Button2Colour);
-		settings["Button2Colour"] = value;
-		value = await GM.getValue("input_button_2_picture", DefaultConfiguration.Button2Picture);
-		settings["Button2Picture"] = value;
-		value = await GM.getValue("input_button_2_width", DefaultConfiguration.Button2Width);
-		settings["Button2Width"] = value;
-		value = await GM.getValue("input_button_2_height", DefaultConfiguration.Button2Height);
-		settings["Button2Height"] = value;
-		value = await GM.getValue("input_button_2_directory", DefaultConfiguration.Button2Directory);
-		settings["Button2Directory"] = value;
+		for (const [key, value] of Object.entries(SettingMapping))
+		{
+			settingValue = await GM.getValue(value, DefaultConfiguration[key]);
+			settings[key] = settingValue;
+
+			// console.log("key " + key + " - value " + value + " - settingvalue " + settingValue)
+		}
 
 		return settings;
 	}
 
 	async function GetMediaButtonSettings()
 	{
-		let value;
-		let settings = {};
-
-		value = await GM.getValue("input_use_save_dir", DefaultConfiguration.UseDirectories);
-		settings["UseDirectories"] = value;
-		value = await GM.getValue("input_media_button_1_colour", DefaultConfiguration.MediaButton1Colour);
-		settings["MediaButton1Colour"] = value;
-		value = await GM.getValue("input_media_button_1_picture", DefaultConfiguration.MediaButton1Picture);
-		settings["MediaButton1Picture"] = value;
-		value = await GM.getValue("input_media_button_1_width", DefaultConfiguration.MediaButton1Width);
-		settings["MediaButton1Width"] = value;
-		value = await GM.getValue("input_media_button_1_height", DefaultConfiguration.MediaButton1Height);
-		settings["MediaButton1Height"] = value;
-		value = await GM.getValue("input_media_button_1_directory", DefaultConfiguration.MediaButton1Directory);
-		settings["MediaButton1Directory"] = value;
-		value = await GM.getValue("input_toggle_media_button_2", DefaultConfiguration.MediaButton2Toggle);
-		settings["MediaButton2Toggle"] = value;
-		value = await GM.getValue("input_media_button_2_colour", DefaultConfiguration.MediaButton2Colour);
-		settings["MediaButton2Colour"] = value;
-		value = await GM.getValue("input_media_button_2_picture", DefaultConfiguration.MediaButton2Picture);
-		settings["MediaButton2Picture"] = value;
-		value = await GM.getValue("input_media_button_2_width", DefaultConfiguration.MediaButton2Width);
-		settings["MediaButton2Width"] = value;
-		value = await GM.getValue("input_media_button_2_height", DefaultConfiguration.MediaButton2Height);
-		settings["MediaButton2Height"] = value;
-		value = await GM.getValue("input_media_button_2_directory", DefaultConfiguration.MediaButton2Directory);
-		settings["MediaButton2Directory"] = value;
-
-		return settings;
+		return await GetButtonSettings();
 	}
 
 	async function GetSetting(setting)
@@ -1032,18 +1047,14 @@ if (typeof InstallTrigger === 'undefined')
 
 	async function AddVideoDownloadButtonToArticle(article, tweetData)
 	{
-		let tweetFooter = article.querySelector('div[role="group"]');
-		if (tweetFooter === null)
+		let divDownloadImgs = AddButtonDiv(article);
+		if (divDownloadImgs === null)
 		{
 			return;
 		}
 
-		let divDownloadImgs = tweetFooter.getElementsByClassName("downloadVids");
-		// let dataAttribute = {};
-
-		if (divDownloadImgs.length > 0)
+		if (divDownloadImgs.attributes["dlbtnattached"])
 		{
-			divDownloadImgs = divDownloadImgs[0];
 			let existingData = JSON.parse(divDownloadImgs.dataset.video);
 			existingData["data"].push(tweetData);
 
@@ -1051,8 +1062,9 @@ if (typeof InstallTrigger === 'undefined')
 			return;
 		}
 
-		divDownloadImgs = document.createElement('DIV');
-		divDownloadImgs.className = 'downloadVids';
+		divDownloadImgs.attributes["dlbtnattached"] = true;
+
+		divDownloadImgs.attributes["tweetData"] = tweetData;
 
 		let embeddedTweetData = {};
 
@@ -1069,41 +1081,43 @@ if (typeof InstallTrigger === 'undefined')
 
 		const buttonSettings = await GetButtonSettings();
 
-		let button1 = document.createElement("button")
-		button1.className = "button1";
-		button1.title = "Download";
-		button1.style.margin = "auto";
-
-		if (buttonSettings["Button1Colour"] !== "")
+		if (buttonSettings["Button1Toggle"])
 		{
-			button1.style.backgroundColor = buttonSettings["Button1Colour"];
+			let button1 = document.createElement("button")
+			button1.className = "button1";
+			button1.title = "Download";
+			// button1.style.margin = "auto";
+
+			if (buttonSettings["Button1Colour"] !== "")
+			{
+				button1.style.backgroundColor = buttonSettings["Button1Colour"];
+			}
+
+			button1.addEventListener("click", function()
+			{
+				HandleDownloadVideo(article, divDownloadImgs, buttonSettings["Button1Directory"]);
+			}, false);
+
+
+			if (buttonSettings["Button1Width"] !== "")
+			{
+				button1.style.width = buttonSettings["Button1Width"];
+			}
+			if (buttonSettings["Button1Height"] !== "")
+			{
+				button1.style.height = buttonSettings["Button1Height"];
+			}
+
+			if (buttonSettings["Button1Picture"] !== "")
+			{
+				let buttonImage = document.createElement("img");
+				buttonImage.className = "button1Image";
+				buttonImage.src = buttonSettings["Button1Picture"];
+				button1.appendChild(buttonImage);
+			}
+
+			divDownloadImgs.appendChild(button1);
 		}
-
-		button1.addEventListener("click", function()
-		{
-			HandleDownloadVideo(article, divDownloadImgs, buttonSettings["Button1Directory"]);
-		}, false);
-
-
-		if (buttonSettings["Button1Width"] !== "")
-		{
-			button1.style.width = buttonSettings["Button1Width"];
-		}
-		if (buttonSettings["Button1Height"] !== "")
-		{
-			button1.style.height = buttonSettings["Button1Height"];
-		}
-
-		if (buttonSettings["Button1Picture"] !== "")
-		{
-			let buttonImage = document.createElement("img");
-			buttonImage.className = "button1Image";
-			buttonImage.src = buttonSettings["Button1Picture"];
-			button1.appendChild(buttonImage);
-		}
-
-		tweetFooter.appendChild(button1);
-		tweetFooter.appendChild(divDownloadImgs);
 
 		if (buttonSettings["Button2Toggle"])
 		{
@@ -1111,7 +1125,7 @@ if (typeof InstallTrigger === 'undefined')
 			button2.className = "button2";
 			button2.title = "Download";
 			button2.style.backgroundColor = buttonSettings["Button2Colour"];
-			button2.style.margin = "auto";
+			// button2.style.margin = "auto";
 
 			button2.addEventListener("click", function()
 			{
@@ -1135,7 +1149,7 @@ if (typeof InstallTrigger === 'undefined')
 				button2.appendChild(buttonImage);
 			}
 
-			tweetFooter.appendChild(button2);
+			divDownloadImgs.appendChild(button2);
 		}
 	}
 
@@ -1173,6 +1187,7 @@ if (typeof InstallTrigger === 'undefined')
 		{
 			let video = videoData[i];
 
+			video["i"] = i;
 			video["index"] = isMultiple ? i + 1 : -1;
 
 			if (!video["tweetId"] || video["tweetId"] === null || video["tweetId"] === "")
@@ -1277,18 +1292,27 @@ if (typeof InstallTrigger === 'undefined')
 
 		let scrappedVideoData;
 
-		if (videoData["index"] === -1)
-		{
-			const datasetData = JSON.parse(tweetStorage.dataset[videoData["tweetId"]])
-			console.log(datasetData)
-			scrappedVideoData = datasetData["0"]
-		}
-		else
-		{
-			const datasetData = JSON.parse(tweetStorage.dataset[videoData["tweetId"]])
-			console.log(datasetData)
-			scrappedVideoData = datasetData[videoData["index"]]
-		}
+		const datasetData = JSON.parse(tweetStorage.dataset[videoData["tweetId"]])
+		console.log(datasetData)
+		console.log(videoData["i"])
+		console.log(videoData)
+		scrappedVideoData = datasetData[videoData["i"]]
+		// if (videoData["index"] === -1)
+		// {
+		// 	const datasetData = JSON.parse(tweetStorage.dataset[videoData["tweetId"]])
+		// 	console.log(datasetData)
+		// 	console.log(videoData["index"])
+		// 	console.log(videoData)
+		// 	scrappedVideoData = datasetData["0"]
+		// }
+		// else
+		// {
+		// 	const datasetData = JSON.parse(tweetStorage.dataset[videoData["tweetId"]])
+		// 	console.log(datasetData)
+		// 	console.log(videoData["index"] - 1)
+		// 	console.log(videoData)
+		// 	scrappedVideoData = datasetData[videoData["index"]]
+		// }
 
 		console.log(scrappedVideoData)
 		const videoUrl = scrappedVideoData["url"];
@@ -1484,44 +1508,46 @@ if (typeof InstallTrigger === 'undefined')
 
 		const buttonSettings = await GetMediaButtonSettings();
 
-		let button1 = document.createElement("button")
-		button1.className = "mediaButton1";
-		button1.classList.add("downloadButton");
-		button1.title = "Download";
-		if (buttonSettings["MediaButton1Colour"] !== "")
+		if (buttonSettings["MediaButton1Toggle"])
 		{
-			button1.style.backgroundColor = buttonSettings["MediaButton1Colour"]
+			let button1 = document.createElement("button")
+			button1.className = "mediaButton1";
+			button1.classList.add("downloadButton");
+			button1.title = "Download";
+			if (buttonSettings["MediaButton1Colour"] !== "")
+			{
+				button1.style.backgroundColor = buttonSettings["MediaButton1Colour"]
+			}
+
+			button1.addEventListener("click", function()
+			{
+				HandleMediaImageDownload(listItem, linkNode, tweetData, buttonSettings["MediaButton1Directory"])
+			}, false);
+
+
+			if (buttonSettings["MediaButton1Width"] !== "")
+			{
+				button1.style.width = buttonSettings["MediaButton1Width"];
+			}
+			if (buttonSettings["MediaButton1Height"] !== "")
+			{
+				button1.style.height = buttonSettings["MediaButton1Height"];
+			}
+
+			if (buttonSettings["MediaButton1Picture"] !== "")
+			{
+				let buttonImage = document.createElement("img");
+				buttonImage.className = "button1Image";
+				buttonImage.src = buttonSettings["MediaButton1Picture"];
+				buttonImage.style["max-width"] = "100%";
+				buttonImage.style["max-height"] = "100%";
+				button1.appendChild(buttonImage);
+			}
+			divDownloadImgs.appendChild(button1);
+
 		}
-
-		button1.addEventListener("click", function()
-		{
-			HandleMediaImageDownload(listItem, linkNode, tweetData, buttonSettings["MediaButton1Directory"])
-		}, false);
-
-
-		if (buttonSettings["MediaButton1Width"] !== "")
-		{
-			button1.style.width = buttonSettings["MediaButton1Width"];
-		}
-		if (buttonSettings["MediaButton1Height"] !== "")
-		{
-			button1.style.height = buttonSettings["MediaButton1Height"];
-		}
-
-		if (buttonSettings["MediaButton1Picture"] !== "")
-		{
-			let buttonImage = document.createElement("img");
-			buttonImage.className = "button1Image";
-			buttonImage.src = buttonSettings["MediaButton1Picture"];
-			buttonImage.style["max-width"] = "100%";
-			buttonImage.style["max-height"] = "100%";
-			button1.appendChild(buttonImage);
-		}
-
-		const useTwoButtons = buttonSettings["MediaButton2Toggle"];
-
 		let button2;
-		if (useTwoButtons)
+		if (buttonSettings["MediaButton2Toggle"])
 		{
 			button2 = document.createElement("button")
 			button2.className = "mediaButton2";
@@ -1555,14 +1581,10 @@ if (typeof InstallTrigger === 'undefined')
 				buttonImage.style["max-height"] = "100%";
 				button2.appendChild(buttonImage);
 			}
-		}
 
-		divDownloadImgs.appendChild(button1);
-
-		if (useTwoButtons)
-		{
 			divDownloadImgs.appendChild(button2);
 		}
+
 		frameParent.insertBefore(divDownloadImgs, linkNode)
 		// frameParent.insertBefore(nsfwDLButton, linkNode)
 		// frameParent.insertBefore(sfwDLButton, linkNode)
@@ -1862,79 +1884,74 @@ if (typeof InstallTrigger === 'undefined')
 
 	async function AddDownloadButtonToArticle(article, tweetData)
 	{
-		let tweetFooter = article.querySelector('div[role="group"]');
-		if (tweetFooter === null)
+		let divDownloadImgs = AddButtonDiv(article);
+		// let tweetFooter = article.querySelector('div[role="group"]');
+		if (divDownloadImgs === null)
 		{
 			return;
 		}
 
-		let divDownloadImgs = tweetFooter.getElementsByClassName("downloadImgs");
-		// let dataAttribute = {};
+		// let divDownloadImgs = tweetFooter.parentElement.getElementsByClassName("downloadImgs");
+		// // let dataAttribute = {};
 
-		if (divDownloadImgs.length > 0)
+		if (divDownloadImgs.attributes["dlbtnattached"])
 		{
-			// divDownloadImgs[0].attributes["tweetData"]["data"].push(tweetData);
 			return;
 		}
 
-		divDownloadImgs = document.createElement('DIV');
-		divDownloadImgs.className = 'downloadImgs';
-		tweetFooter.appendChild(divDownloadImgs);
+		divDownloadImgs.attributes["dlbtnattached"] = true;
 
-		// dataAttribute["tweetId"] = tweetData.id;
-		// dataAttribute["data"] = []
-		// dataAttribute["data"].push(tweetData)
-		// divDownloadImgs.attributes["tweetData"].push(dataAttribute);
-
-		// dataAttribute["tweetId"] = tweetData.id;
-		// dataAttribute["data"] = []
-		// dataAttribute["data"].push(tweetData)
 		divDownloadImgs.attributes["tweetData"] = tweetData;
 
 		const buttonSettings = await GetButtonSettings();
 
-		let button1 = document.createElement("button")
-		button1.className = "button1";
-		button1.title = "Download";
-		button1.style.margin = "auto";
-
-		if (buttonSettings["Button1Colour"] !== "")
+		if (buttonSettings["Button1Toggle"])
 		{
-			button1.style.backgroundColor = buttonSettings["Button1Colour"];
+			let button1 = document.createElement("button")
+			button1.className = "downloadbutton button1";
+			button1.title = "Download";
+			// button1.style.margin = "auto";
+
+			if (buttonSettings["Button1Colour"] !== "")
+			{
+				button1.style.backgroundColor = buttonSettings["Button1Colour"];
+			}
+
+			button1.addEventListener("click", function()
+			{
+				NewDownloadImage(article, divDownloadImgs, buttonSettings["Button1Directory"]);
+			}, false);
+
+			if (buttonSettings["Button1Width"] !== "")
+			{
+				button1.style.width = buttonSettings["Button1Width"];
+			}
+			if (buttonSettings["Button1Height"] !== "")
+			{
+				button1.style.height = buttonSettings["Button1Height"];
+			}
+
+			// button1.style.float = "right";
+
+
+			if (buttonSettings["Button1Picture"] !== "")
+			{
+				let buttonImage = document.createElement("img");
+				buttonImage.className = "button1Image";
+				buttonImage.src = buttonSettings["Button1Picture"];
+				button1.appendChild(buttonImage);
+			}
+
+			divDownloadImgs.appendChild(button1);
 		}
-
-		button1.addEventListener("click", function()
-		{
-			NewDownloadImage(article, divDownloadImgs, buttonSettings["Button1Directory"]);
-		}, false);
-
-		if (buttonSettings["Button1Width"] !== "")
-		{
-			button1.style.width = buttonSettings["Button1Width"];
-		}
-		if (buttonSettings["Button1Height"] !== "")
-		{
-			button1.style.height = buttonSettings["Button1Height"];
-		}
-
-
-		if (buttonSettings["Button1Picture"] !== "")
-		{
-			let buttonImage = document.createElement("img");
-			buttonImage.className = "button1Image";
-			buttonImage.src = buttonSettings["Button1Picture"];
-			button1.appendChild(buttonImage);
-		}
-
-		tweetFooter.appendChild(button1);
 
 		if (buttonSettings["Button2Toggle"])
 		{
 			let button2 = document.createElement("button")
-			button2.className = "button2";
+			button2.className = "downloadbutton button2";
 			button2.title = "Download";
 			button2.style.backgroundColor = buttonSettings["Button2Colour"];
-			button2.style.margin = "auto";
+			// button2.style.margin = "auto";
 
 			button2.addEventListener("click", function()
 			{
@@ -1950,6 +1967,8 @@ if (typeof InstallTrigger === 'undefined')
 				button2.style.height = buttonSettings["Button2Height"];
 			}
 
+			// button2.style.float = "right";
+
 			if (tweetButtonImage !== "")
 			{
 				let buttonImage = document.createElement("img");
@@ -1958,286 +1977,149 @@ if (typeof InstallTrigger === 'undefined')
 				button2.appendChild(buttonImage);
 			}
 
-			tweetFooter.appendChild(button2);
+			// tweetFooter.appendChild(button2);
+			divDownloadImgs.appendChild(button2);
 		}
 	}
 
-	// function ProcessInterceptedJson(json)
-	// {
-	// 	if (!json["data"] ||
-	// 		!json["data"]["threaded_conversation_with_injections_v2"] ||
-	// 		!json["data"]["threaded_conversation_with_injections_v2"]["instructions"])
-	// 	{
-	// 		return;
-	// 	}
+	async function CopyTweetUrl(downloadDiv)
+	{
+		let article = downloadDiv.closest("article")
+		if (article === null)
+		{
+			return
+		}
+		let links = article.querySelectorAll('a[role="link"]');
+		let linkNode = null;
 
-	// 	let instructions = json["data"]["threaded_conversation_with_injections_v2"]["instructions"];
-	// 	let timelineAdd = null;
-	// 	let pinnedTweet = null;
-	// 	console.log("instruction")
+		for (let i = 0; i < links.length; i++)
+		{
+			if (links[i].querySelector("time") !== null)
+			{
+				linkNode = links[i];
+				break;
+			}
+		}
 
-	// 	for (let i = 0; i < instructions.length; i++)
-	// 	{
-	// 		if (instructions[i]["type"] && instructions[i]["type"] == "TimelineAddEntries")
-	// 		{
-	// 			timelineAdd = instructions[i]["type"];
-	// 			// timelineAdd = instructions[i];
-	// 		}
-	// 		if (instructions[i]["type"] && instructions[i]["type"] == "TimelinePinEntry")
-	// 		{
-	// 			pinnedTweet = instructions[i]["type"]
-	// 		}
-	// 	}
+		if (linkNode === null)
+		{
+			return;
+		}
 
-	// 	if (!timelineAdd || timelineAdd === null)
-	// 	{
-	// 		return;
-	// 	}
-	// 	console.log("timelineAdd")
-	// 	console.log(timelineAdd)
+		let tweetData = GetTweetUrlData(linkNode.href);
 
-	// 	let entries = timelineAdd?.["entries"];
-	// 	try
-	// 	{
-	// 		if (entries !== null && entries !== undefined)
-	// 		{
-	// 			// if (!entries || entries === null)
-	// 			// {
-	// 			// 	return;
-	// 			// }
-	// 			console.log("entries")
+		const buttonSettings = await GetButtonSettings();
+		const urlBase = "https://{domain}.com/{user}/status/{postid}";
+		let url = urlBase.replace("{domain}", buttonSettings["CopyUrlDomain"]).replace("{user}", tweetData["user"]).replace("{postid}", tweetData["id"]);
 
-	// 			for (let i = 0; i < entries.length; i++)
-	// 			{
-	// 				ProcessTweetAddEntry(entries[i]);
-	// 			}
-	// 		}
-	// 	}
-	// 	catch (ex)
-	// 	{
-	// 		console.log(ex)
-	// 	}
+		// if (typeof ClipboardItem !== 'undefined')
+		// {
+		// 	const item = new ClipboardItem(
+		// 	{
+		// 		"text/plain": "test"
+		// 	});
 
-	// 	try
-	// 	{
-	// 		entries = pinnedTweet?.["entries"]
-	// 		if (entries !== null && entries !== undefined)
-	// 		{
-	// 			console.log("pinned entries")
+		// 	await navigator.clipboard.write([item])
+		// }
+		// else
+		// {
+		await navigator.clipboard.writeText(url)
 
-	// 			for (let i = 0; i < entries.length; i++)
-	// 			{
-	// 				ProcessTweetAddEntry(entries[i]);
-	// 			}
+		// }
+	}
 
-	// 		}
-	// 	}
-	// 	catch (ex)
-	// 	{
-	// 		console.log(ex)
-	// 	}
-	// }
+	function AddButtonDiv(node)
+	{
+		let article;
+		if (node.tagName === "ARTICLE")
+		{
+			article = node;
+		}
+		else
+		{
+			article = node.closest("article")
+			if (article == null)
+			{
+				return;
+			}
+		}
 
-	// async function ProcessTweetAddEntry(entry)
-	// {
-	// 	if (!entry || entry === null)
-	// 	{
-	// 		return;
-	// 	}
+		let divDownloadImgs = article.getElementsByClassName("downloadImgs");
+		if (divDownloadImgs.length > 0)
+		{
+			return divDownloadImgs[0];
+		}
 
-	// 	console.log("entry")
+		let tweetFooter = article.querySelector('div[role="group"]');
+		if (tweetFooter === null)
+		{
+			return;
+		}
 
-	// 	if (!entry["content"] || !entry["content"]["items"])
-	// 	{
-	// 		return;
-	// 	}
+		divDownloadImgs = document.createElement('DIV');
+		divDownloadImgs.className = 'downloadImgs';
+		divDownloadImgs.style.display = "flex";
+		tweetFooter.parentElement.insertBefore(divDownloadImgs, tweetFooter);
 
-	// 	let tweetItems = entry["content"]["items"]
-	// 	console.log("tweetItems")
 
-	// 	for (let i = 0; i < tweetItems.length; i++)
-	// 	{
-	// 		let item = tweetItems[i];
-	// 		// Now validate the only path we care about
+		return divDownloadImgs;
+	}
 
-	// 		if (!item["itemContent"] ||
-	// 			!item["itemContent"]["tweet_results"] ||
-	// 			!item["itemContent"]["tweet_results"]["result"] ||
-	// 			!item["itemContent"]["tweet_results"]["result"]["legacy"] ||
-	// 			!item["itemContent"]["tweet_results"]["result"]["legacy"]["entities"] ||
-	// 			!item["itemContent"]["tweet_results"]["result"]["legacy"]["entities"]["media"])
-	// 		{
-	// 			console.log("media")
+	async function AddButtonUtilities(node)
+	{
+		let divDownloadImgs = node.getElementsByClassName("downloadImgs");
 
-	// 			let media = item["itemContent"]["tweet_results"]["result"]["legacy"]["entities"]["media"];
-	// 			let tweetId = item["itemContent"]["tweet_results"]["result"]["legacy"]["id_str"];
-	// 			await ProcessTweetMedia(media);
-	// 		}
-	// 	}
-	// }
+		if (divDownloadImgs === null || divDownloadImgs?.length === 0)
+		{
+			divDownloadImgs = AddButtonDiv(node)
+		}
 
-	// async function ProcessTweetMedia(media, tweetId)
-	// {
-	// 	if (!media || media === null || !media["type"])
-	// 	{
-	// 		return;
-	// 	}
+		if (divDownloadImgs === null || divDownloadImgs?.length === 0)
+		{
+			return;
+		}
 
-	// 	if (media["type"].toUpperCase() !== "video".toUpperCase())
-	// 	{
-	// 		return;
-	// 	}
+		const buttonSettings = await GetButtonSettings();
 
-	// 	let originalInfo = media["original_info"];
-	// 	let sizes = media["sizes"];
-	// 	let variants = media["variants"];
+		if (buttonSettings["CopyUrlToggle"])
+		{
+			if (divDownloadImgs.querySelectorAll(".copyUrlButton").length === 0)
+			{
+				let copyUrlButton = document.createElement("button")
+				copyUrlButton.className = "copyUrlButton";
+				copyUrlButton.title = "Download";
+				copyUrlButton.style.backgroundColor = buttonSettings["CopyUrlColour"];
+				copyUrlButton.style.margin = "auto";
 
-	// 	let originalSizeValue = null;
+				copyUrlButton.addEventListener("click", function()
+				{
+					CopyTweetUrl(divDownloadImgs);
+				}, false);
 
-	// 	if (originalInfo)
-	// 	{
-	// 		originalSizeValue = originalInfo["width"] + "x" + originalInfo["height"];
-	// 	}
+				if (buttonSettings["CopyUrlWidth"] !== "")
+				{
+					copyUrlButton.style.width = buttonSettings["CopyUrlWidth"];
 
-	// 	let existingSizes = {};
-	// 	if (sizes)
-	// 	{
-	// 		if (sizes[VideoSizes.Large])
-	// 		{
-	// 			let size = sizes[VideoSizes.Large];
-	// 			existingSizes[VideoSizes.Large] = size;
-	// 			existingSizes[VideoSizes.Large]["sizeValue"] = size["w"] + "x" + size["h"];
-	// 		}
-	// 		else if (sizes[VideoSizes.Medium])
-	// 		{
-	// 			let size = sizes[VideoSizes.Medium];
-	// 			existingSizes[VideoSizes.Medium] = size;
-	// 			existingSizes[VideoSizes.Medium]["sizeValue"] = size["w"] + "x" + size["h"];
-	// 		}
-	// 		else if (sizes[VideoSizes.Small])
-	// 		{
-	// 			let size = sizes[VideoSizes.Small];
-	// 			existingSizes[VideoSizes.Small] = size;
-	// 			existingSizes[VideoSizes.Small]["sizeValue"] = size["w"] + "x" + size["h"];
-	// 		}
-	// 	}
+				}
+				if (buttonSettings["CopyUrlHeight"] !== "")
+				{
+					copyUrlButton.style.height = buttonSettings["CopyUrlHeight"];
+				}
 
-	// 	let bestSize = null;
-	// 	let m3u8Url = null;
+				copyUrlButton.style.float = "center";
 
-	// 	for (let i = 0; i < variants.length; i++)
-	// 	{
-	// 		let variant = variants[i];
-	// 		if (variant["url"].includes(".m3u8"))
-	// 		{
-	// 			m3u8Url = variant["url"];
-	// 		}
-	// 		else if (originalSizeValue &&
-	// 			originalSizeValue !== null &&
-	// 			variant["url"].includes(originalSizeValue))
-	// 		{
-	// 			bestSize = variant["url"];
-	// 		}
-	// 	}
+				if (buttonSettings["CopyUrlPicture"] !== "")
+				{
+					let buttonImage = document.createElement("img");
+					buttonImage.className = "copyUrlImage";
+					buttonImage.src = buttonSettings["CopyUrlPicture"];
+					copyUrlButton.appendChild(buttonImage);
+				}
 
-	// 	if (!bestSize ||
-	// 		bestSize === null &&
-	// 		sizes[VideoSizes.Large])
-	// 	{
-	// 		let size = sizes[VideoSizes.Large];
-
-	// 		for (let i = 0; i < variants.length; i++)
-	// 		{
-	// 			let variant = variants[i];
-	// 			if (variant["url"].includes(size))
-	// 			{
-	// 				bestSize = variant["url"];
-	// 			}
-	// 		}
-	// 	}
-
-	// 	if (!bestSize ||
-	// 		bestSize === null &&
-	// 		sizes[VideoSizes.Medium])
-	// 	{
-	// 		let size = sizes[VideoSizes.Medium];
-
-	// 		for (let i = 0; i < variants.length; i++)
-	// 		{
-	// 			let variant = variants[i];
-	// 			if (variant["url"].includes(size))
-	// 			{
-	// 				bestSize = variant["url"];
-	// 			}
-	// 		}
-	// 	}
-
-	// 	if (!bestSize ||
-	// 		bestSize === null &&
-	// 		sizes[VideoSizes.Small])
-	// 	{
-	// 		let size = sizes[VideoSizes.Small];
-
-	// 		for (let i = 0; i < variants.length; i++)
-	// 		{
-	// 			let variant = variants[i];
-	// 			if (variant["url"].includes(size))
-	// 			{
-	// 				bestSize = variant["url"];
-	// 			}
-	// 		}
-	// 	}
-
-	// 	if (!bestSize || bestSize === null)
-	// 	{
-	// 		return;
-	// 	}
-
-	// 	console.log(bestSize);
-	// 	console.log(m3u8Url)
-
-	// 	let storedValue = {};
-	// 	storedValue["url"] = bestSize;
-	// 	storedValue["m3u8"] = m3u8Url;
-	// 	// storedValue["grabbed"] = Date.now();
-	// 	storedValue["id"] = tweetId;
-	// 	console.log(storedValue);
-
-	// 	let storageKey = "twdl_" + tweetId;
-
-	// 	let existingEntry = videoDataStorage[storageKey];
-
-	// 	// Consumed
-	// 	if (existingEntry && existingEntry === -1)
-	// 	{
-	// 		return;
-	// 	}
-
-	// 	if (existingEntry === null || existingEntry === undefined)
-	// 	{
-	// 		existingEntry[storageKey] = storedValue;
-	// 	}
-	// 	else if (existingEntry)
-	// 	{
-	// 		// videoDataStorage[storageKey] = 
-	// 	}
-
-	// 	// let existingEntry = tweetStorage.dataset[storageKey];
-	// 	// // let existingEntry = await GM.getValue(storageKey, -1);
-	// 	// if (existingEntry === null || existingEntry === undefined)
-	// 	// {
-	// 	//  tweetStorage.data[storageKey] = JSON.stringify(storedValue);
-
-	// 	//  await GM.setValue(storageKey, storedValue);
-	// 	// }
-	// 	// else
-	// 	// {
-	// 	//  console.log("existing")
-	// 	//  console.log(existingEntry);
-	// 	//  existingEntry["grabbed"] = Date.now();
-	// 	//  await GM.setValue(storageKey, existingEntry);
-	// 	// }
-	// }
+				divDownloadImgs.appendChild(copyUrlButton);
+			}
+		}
+	}
 
 	const observer = new MutationObserver(mutationList =>
 	{
@@ -2248,10 +2130,12 @@ if (typeof InstallTrigger === 'undefined')
 			m.addedNodes.forEach(
 				node =>
 				{
-					// console.log(node);
+					//console.log(node);
 
 					if (node.tagName == "IMG")
 					{
+
+
 						// console.log(node);
 						// console.log(node.parentNode)
 
@@ -2277,6 +2161,8 @@ if (typeof InstallTrigger === 'undefined')
 							node.parentNode.attributes["data-testid"] &&
 							node.parentNode.attributes["data-testid"].value === "tweetPhoto")
 						{
+							AddButtonUtilities(node)
+
 							let imageParent = node.parentNode;
 							// console.log("image")
 							// console.log(node.parentNode)
@@ -2294,6 +2180,8 @@ if (typeof InstallTrigger === 'undefined')
 							node.parentNode.attributes["aria-label"].value == "Embedded video" ||
 							(node.src && node.src.includes("tweet_video") || node.src.includes("tw_video")))
 						{
+							AddButtonUtilities(node)
+
 							// console.log("VIDEO")
 							// console.log(node)
 							let imageParent = node.parentNode;
@@ -2365,6 +2253,10 @@ if (typeof InstallTrigger === 'undefined')
                           <p></p>                                  \
                           </div>                                  \
               <div>                                                                          \
+             <label id="label_toggle_button_1">Enable Button 1</label>           \
+             <input type="checkbox" id="input_toggle_button_1">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
              <label id="label_button_1_colour">Button 1 Colour</label>                       \
             <input id="input_button_1_colour">                                      \
               </div>                                                                          \
@@ -2383,7 +2275,7 @@ if (typeof InstallTrigger === 'undefined')
               <div>                                                                          \
              <label id="label_button_1_directory">Button 1 Directory</label>                       \
              <input id="input_button_1_directory">                                      \
-              <div>                                                                          \
+              </div>                                                                          \
                           <div>                     \
                           <p></p>                                  \
                           </div>                                  \
@@ -2418,6 +2310,10 @@ if (typeof InstallTrigger === 'undefined')
                           </div>                                  \
                                                                     \
                                                                     \
+                            <div>                                                                          \
+             <label id="label_toggle_media_button_1">Enable Media Button 1</label>           \
+             <input type="checkbox" id="input_toggle_media_button_1">                                      \
+              </div>                                                                          \
                           <div>                                                                          \
              <label id="label_media_button_1_colour">Media Button 1 Colour</label>                       \
             <input id="input_media_button_1_colour">                                      \
@@ -2437,7 +2333,7 @@ if (typeof InstallTrigger === 'undefined')
               <div>                                                                          \
              <label id="label_media_button_1_directory">Media Button 1 Directory</label>                       \
              <input id="input_media_button_1_directory">                                      \
-              <div>                                                                          \
+              </div>                                                                          \
                           <div>                     \
                           <p></p>                                  \
                           </div>                                  \
@@ -2466,6 +2362,34 @@ if (typeof InstallTrigger === 'undefined')
              <label id="label_media_button_2_directory">Media Button 2 Directory</label>                       \
              <input id="input_media_button_2_directory">                                      \
               </div>                                                                          \
+                                       <div>                     \
+                          <p></p>                                  \
+                          </div>                                  \
+                                                                    \
+              <div>                                                                          \
+             <label id="label_toggle_button_copyurl">Enable Copy Url Button</label>           \
+             <input type="checkbox" id="input_toggle_button_copyurl">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_colour">Copy Url Colour</label>                       \
+             <input id="input_button_copyurl_colour">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_picture">Copy Url Picture</label>                       \
+             <input id="input_button_copyurl_picture">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_width">Copy Url Width</label>                       \
+             <input id="input_button_copyurl_width">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_height">Copy Url Height</label>                       \
+             <input id="input_button_copyurl_height">                                      \
+              </div>                                                                          \
+               <div>                                                                          \
+              <label id="label_button_copyurl_domain">Copy Url domain</label>                       \
+              <input id="input_button_copyurl_domain">                                      \
+               </div>                                                                          \
              </div>                                                                         \
             '
 			);
@@ -2482,6 +2406,7 @@ if (typeof InstallTrigger === 'undefined')
 				width: 580,
 				buttons: [
 				{
+					style: "lightgrey",
 					text: "Import",
 					click: function()
 					{
@@ -2633,58 +2558,6 @@ if (typeof InstallTrigger === 'undefined')
 			}
 		}
 
-		// value = await GM.getValue("input_use_save_dir", DefaultConfiguration.UseDirectories);
-		// settings["UseDirectories"] = value;
-		// settings["UseDirectories"] = value;
-		// value = await GM.getValue("input_toggle_button_2", DefaultConfiguration.Button2Toggle);
-		// settings["Button2Toggle"] = value;
-		// value = await GM.getValue("input_toggle_media_button_2", DefaultConfiguration.MediaButton2Toggle);
-		// settings["MediaButton2Toggle"] = value;
-
-		// value = await GM.getValue("input_button_1_colour", DefaultConfiguration.Button1Colour);
-		// settings["Button1Colour"] = value;
-		// value = await GM.getValue("input_button_1_picture", DefaultConfiguration.Button1Picture);
-		// settings["Button1Picture"] = value;
-		// value = await GM.getValue("input_button_1_width", DefaultConfiguration.Button1Width);
-		// settings["Button1Width"] = value;
-		// value = await GM.getValue("input_button_1_height", DefaultConfiguration.Button1Height);
-		// settings["Button1Height"] = value;
-		// value = await GM.getValue("input_button_1_directory", DefaultConfiguration.Button1Directory);
-		// settings["Button1Directory"] = value;
-
-		// value = await GM.getValue("input_button_2_colour", DefaultConfiguration.Button2Colour);
-		// settings["Button2Colour"] = value;
-		// value = await GM.getValue("input_button_2_picture", DefaultConfiguration.Button2Picture);
-		// settings["Button2Picture"] = value;
-		// value = await GM.getValue("input_button_2_width", DefaultConfiguration.Button2Width);
-		// settings["Button2Width"] = value;
-		// value = await GM.getValue("input_button_2_height", DefaultConfiguration.Button2Height);
-		// settings["Button2Height"] = value;
-		// value = await GM.getValue("input_button_2_directory", DefaultConfiguration.Button2Directory);
-		// settings["Button2Directory"] = value;
-
-		// value = await GM.getValue("input_media_button_1_colour", DefaultConfiguration.MediaButton1Colour);
-		// settings["MediaButton1Colour"] = value;
-		// value = await GM.getValue("input_media_button_1_picture", DefaultConfiguration.MediaButton1Picture);
-		// settings["MediaButton1Picture"] = value;
-		// value = await GM.getValue("input_media_button_1_width", DefaultConfiguration.MediaButton1Width);
-		// settings["MediaButton1Width"] = value;
-		// value = await GM.getValue("input_media_button_1_height", DefaultConfiguration.MediaButton1Height);
-		// settings["MediaButton1Height"] = value;
-		// value = await GM.getValue("input_media_button_1_directory", DefaultConfiguration.MediaButton1Directory);
-		// settings["MediaButton1Directory"] = value;
-
-		// value = await GM.getValue("input_media_button_2_colour", DefaultConfiguration.MediaButton2Colour);
-		// settings["MediaButton2Colour"] = value;
-		// value = await GM.getValue("input_media_button_2_picture", DefaultConfiguration.MediaButton2Picture);
-		// settings["MediaButton2Picture"] = value;
-		// value = await GM.getValue("input_media_button_2_width", DefaultConfiguration.MediaButton2Width);
-		// settings["MediaButton2Width"] = value;
-		// value = await GM.getValue("input_media_button_2_height", DefaultConfiguration.MediaButton2Height);
-		// settings["MediaButton2Height"] = value;
-		// value = await GM.getValue("input_media_button_2_directory", DefaultConfiguration.MediaButton2Directory);
-		// settings["MediaButton2Directory"] = value;
-
 		const settingBlob = await new Blob([JSON.stringify(settings)],
 		{
 			type: "text/plain",
@@ -2736,138 +2609,31 @@ if (typeof InstallTrigger === 'undefined')
 
 	const FillSettingsPage = async function()
 	{
+		for (const [key, value] of Object.entries(UICheckBoxes))
+		{
+			let settingValue = await GetSetting(key)
+			$("#" + value)[0].checked = settingValue;
+		}
 
-		let value;
-
-		// value = await GM.getValue("input_use_save_dir", "");
-		// $("#input_use_save_dir")[0].value = value;
-
-		// value = await GM.getValue("input_button_1_colour", "");
-		// $("#input_button_1_colour")[0].value = value;
-		// value = await GM.getValue("input_button_1_picture", "");
-		// $("#input_button_1_picture")[0].value = value;
-		// value = await GM.getValue("input_button_1_width", "");
-		// $("#input_button_1_width")[0].value = value;
-		// value = await GM.getValue("input_button_1_height", "");
-		// $("#input_button_1_height")[0].value = value;
-		// value = await GM.getValue("input_button_1_directory", "");
-		// $("#input_button_1_directory")[0].value = value;
-		// value = await GM.getValue("input_toggle_button_2", "");
-		// $("#input_toggle_button_2")[0].checked = value;
-		// value = await GM.getValue("input_button_2_colour", "");
-		// $("#input_button_2_colour")[0].value = value;
-		// value = await GM.getValue("input_button_2_picture", "");
-		// $("#input_button_2_picture")[0].value = value;
-		// value = await GM.getValue("input_button_2_width", "");
-		// $("#input_button_2_width")[0].value = value;
-		// value = await GM.getValue("input_button_2_height", "");
-		// $("#input_button_2_height")[0].value = value;
-		// value = await GM.getValue("input_button_2_directory", "");
-		// $("#input_button_2_directory")[0].value = value;
-		// value = await GM.getValue("input_media_button_1_colour", "");
-		// $("#input_media_button_1_colour")[0].value = value;
-		// value = await GM.getValue("input_media_button_1_picture", "");
-		// $("#input_media_button_1_picture")[0].value = value;
-		// value = await GM.getValue("input_media_button_1_width", "");
-		// $("#input_media_button_1_width")[0].value = value;
-		// value = await GM.getValue("input_media_button_1_height", "");
-		// $("#input_media_button_1_height")[0].value = value;
-		// value = await GM.getValue("input_media_button_1_directory", "");
-		// $("#input_media_button_1_directory")[0].value = value;
-		// value = await GM.getValue("input_toggle_media_button_2", "");
-		// $("#input_toggle_media_button_2")[0].checked = value;
-		// value = await GM.getValue("input_media_button_2_colour", "");
-		// $("#input_media_button_2_colour")[0].value = value;
-		// value = await GM.getValue("input_media_button_2_picture", "");
-		// $("#input_media_button_2_picture")[0].value = value;
-		// value = await GM.getValue("input_media_button_2_width", "");
-		// $("#input_media_button_2_width")[0].value = value;
-		// value = await GM.getValue("input_media_button_2_height", "");
-		// $("#input_media_button_2_height")[0].value = value;
-		// value = await GM.getValue("input_media_button_2_directory", "");
-		// $("#input_media_button_2_directory")[0].value = value;
-
-		value = await GetSetting("UseDirectories")
-		$("#input_use_save_dir")[0].checked = value;
-		value = await GetSetting("Button2Toggle")
-		$("#input_toggle_button_2")[0].checked = value;
-		value = await GetSetting("MediaButton2Toggle")
-		$("#input_toggle_media_button_2")[0].checked = value;
-
-		value = await GetSetting("Button1Colour")
-		$("#input_button_1_colour")[0].value = value;
-		value = await GetSetting("Button1Picture")
-		$("#input_button_1_picture")[0].value = value;
-		value = await GetSetting("Button1Width")
-		$("#input_button_1_width")[0].value = value;
-		value = await GetSetting("Button1Height")
-		$("#input_button_1_height")[0].value = value;
-		value = await GetSetting("Button1Directory")
-		$("#input_button_1_directory")[0].value = value;
-
-		value = await GetSetting("Button2Colour")
-		$("#input_button_2_colour")[0].value = value;
-		value = await GetSetting("Button2Picture")
-		$("#input_button_2_picture")[0].value = value;
-		value = await GetSetting("Button2Width")
-		$("#input_button_2_width")[0].value = value;
-		value = await GetSetting("Button2Height")
-		$("#input_button_2_height")[0].value = value;
-		value = await GetSetting("Button2Directory")
-		$("#input_button_2_directory")[0].value = value;
-
-		value = await GetSetting("MediaButton1Colour")
-		$("#input_media_button_1_colour")[0].value = value;
-		value = await GetSetting("MediaButton1Picture")
-		$("#input_media_button_1_picture")[0].value = value;
-		value = await GetSetting("MediaButton1Width")
-		$("#input_media_button_1_width")[0].value = value;
-		value = await GetSetting("MediaButton1Height")
-		$("#input_media_button_1_height")[0].value = value;
-		value = await GetSetting("MediaButton1Directory")
-		$("#input_media_button_1_directory")[0].value = value;
-
-
-		value = await GetSetting("MediaButton2Colour")
-		$("#input_media_button_2_colour")[0].value = value;
-		value = await GetSetting("MediaButton2Picture")
-		$("#input_media_button_2_picture")[0].value = value;
-		value = await GetSetting("MediaButton2Width")
-		$("#input_media_button_2_width")[0].value = value;
-		value = await GetSetting("MediaButton2Height")
-		$("#input_media_button_2_height")[0].value = value;
-		value = await GetSetting("MediaButton2Directory")
-		$("#input_media_button_2_directory")[0].value = value;
+		for (const [key, value] of Object.entries(UITextBoxes))
+		{
+			let settingValue = await GetSetting(key)
+			$("#" + value)[0].value = settingValue;
+		}
 	}
 
 	const SettingsDialogOk = function(dialog)
 	{
-		let button1Colour = $("#input_button_1_colour")[0].value;
-		let enableButton2 = $("#input_toggle_button_2")[0].checked;
+		for (const [key, value] of Object.entries(UICheckBoxes))
+		{
+			GM.setValue(value, $("#" + value)[0].checked)
+		}
 
-		GM.setValue("input_use_save_dir", $("#input_use_save_dir")[0].checked)
-		GM.setValue("input_button_1_colour", $("#input_button_1_colour")[0].value)
-		GM.setValue("input_button_1_picture", $("#input_button_1_picture")[0].value)
-		GM.setValue("input_button_1_width", $("#input_button_1_width")[0].value)
-		GM.setValue("input_button_1_height", $("#input_button_1_height")[0].value)
-		GM.setValue("input_button_1_directory", $("#input_button_1_directory")[0].value)
-		GM.setValue("input_toggle_button_2", $("#input_toggle_button_2")[0].checked)
-		GM.setValue("input_button_2_colour", $("#input_button_2_colour")[0].value)
-		GM.setValue("input_button_2_picture", $("#input_button_2_picture")[0].value)
-		GM.setValue("input_button_2_width", $("#input_button_2_width")[0].value)
-		GM.setValue("input_button_2_height", $("#input_button_2_height")[0].value)
-		GM.setValue("input_button_2_directory", $("#input_button_2_directory")[0].value)
-		GM.setValue("input_media_button_1_colour", $("#input_media_button_1_colour")[0].value)
-		GM.setValue("input_media_button_1_picture", $("#input_media_button_1_picture")[0].value)
-		GM.setValue("input_media_button_1_width", $("#input_media_button_1_width")[0].value)
-		GM.setValue("input_media_button_1_height", $("#input_media_button_1_height")[0].value)
-		GM.setValue("input_media_button_1_directory", $("#input_media_button_1_directory")[0].value)
-		GM.setValue("input_toggle_media_button_2", $("#input_toggle_media_button_2")[0].checked)
-		GM.setValue("input_media_button_2_colour", $("#input_media_button_2_colour")[0].value)
-		GM.setValue("input_media_button_2_picture", $("#input_media_button_2_picture")[0].value)
-		GM.setValue("input_media_button_2_width", $("#input_media_button_2_width")[0].value)
-		GM.setValue("input_media_button_2_height", $("#input_media_button_2_height")[0].value)
-		GM.setValue("input_media_button_2_directory", $("#input_media_button_2_directory")[0].value)
+		for (const [key, value] of Object.entries(UITextBoxes))
+		{
+			GM.setValue(value, $("#" + value)[0].value)
+
+		}
 
 		return true;
 	}
@@ -2899,6 +2665,10 @@ if (typeof InstallTrigger === 'undefined')
                 }
                  div#twimgdl_import_parent {
                     z-index: 83700;
+                }
+
+                button.ui-button {
+                	background-color : lightgrey
                 }
                 
 
