@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.4.0
+// @version      3.4.1
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -606,14 +606,14 @@ if (typeof InstallTrigger === 'undefined')
 
 		Button1Colour: "red",
 		Button1Picture: DefaultButton1Image,
-		Button1Width: "32px",
-		Button1Height: "32px",
+		Button1Width: "50px",
+		Button1Height: "50px",
 		Button1Directory: "media/dwn/twitterNSFW/",
 
 		Button2Colour: "blue",
 		Button2Picture: tweetButtonImage,
-		Button2Width: "32px",
-		Button2Height: "32px",
+		Button2Width: "50px",
+		Button2Height: "50px",
 		Button2Directory: "media/dwn/twitterSFW/",
 
 		MediaButton1Colour: "red",
@@ -630,8 +630,8 @@ if (typeof InstallTrigger === 'undefined')
 
 		CopyUrlColour: "grey",
 		CopyUrlPicture: DefaultCopyUrlButtonImage,
-		CopyUrlWidth: "32px",
-		CopyUrlHeight: "32px",
+		CopyUrlWidth: "50px",
+		CopyUrlHeight: "50px",
 		CopyUrlDomain: "vxtwitter",
 	}
 
