@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.4.1
+// @version      3.4.2
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -1079,7 +1079,26 @@ if (typeof InstallTrigger === 'undefined')
 
 		// console.log("embed")
 
+		let dlButtonCollection = document.createElement("DIV")
+		dlButtonCollection.className = "dlbuttoncollection";
+		dlButtonCollection.style.marginLeft = "auto";
+
+		let copyButton = divDownloadImgs.querySelector(".copyUrlButton");
+		if (copyButton == null)
+		{
+			divDownloadImgs.appendChild(dlButtonCollection);
+		}
+		else
+		{
+			divDownloadImgs.insertAfter(dlButtonCollection, copyButton);
+		}
+
 		const buttonSettings = await GetButtonSettings();
+
+		if (!buttonSettings["Button1Toggle"] && !buttonSettings["Button2Toggle"])
+		{
+			dlButtonCollection.style.marginRight = "auto";
+		}
 
 		if (buttonSettings["Button1Toggle"])
 		{
@@ -1116,7 +1135,7 @@ if (typeof InstallTrigger === 'undefined')
 				button1.appendChild(buttonImage);
 			}
 
-			divDownloadImgs.appendChild(button1);
+			dlButtonCollection.appendChild(button1);
 		}
 
 		if (buttonSettings["Button2Toggle"])
@@ -1149,7 +1168,7 @@ if (typeof InstallTrigger === 'undefined')
 				button2.appendChild(buttonImage);
 			}
 
-			divDownloadImgs.appendChild(button2);
+			dlButtonCollection.appendChild(button2);
 		}
 	}
 
@@ -1903,7 +1922,26 @@ if (typeof InstallTrigger === 'undefined')
 
 		divDownloadImgs.attributes["tweetData"] = tweetData;
 
+		let dlButtonCollection = document.createElement("DIV")
+		dlButtonCollection.className = "dlbuttoncollection";
+		dlButtonCollection.style.marginLeft = "auto";
+
+		let copyButton = divDownloadImgs.querySelector(".copyUrlButton");
+		if (copyButton == null)
+		{
+			divDownloadImgs.appendChild(dlButtonCollection);
+		}
+		else
+		{
+			divDownloadImgs.insertAfter(dlButtonCollection, copyButton);
+		}
+
 		const buttonSettings = await GetButtonSettings();
+
+		if (!buttonSettings["Button1Toggle"] && !buttonSettings["Button2Toggle"])
+		{
+			dlButtonCollection.style.marginRight = "auto";
+		}
 
 		if (buttonSettings["Button1Toggle"])
 		{
@@ -1942,7 +1980,7 @@ if (typeof InstallTrigger === 'undefined')
 				button1.appendChild(buttonImage);
 			}
 
-			divDownloadImgs.appendChild(button1);
+			dlButtonCollection.appendChild(button1);
 		}
 
 		if (buttonSettings["Button2Toggle"])
@@ -1978,7 +2016,7 @@ if (typeof InstallTrigger === 'undefined')
 			}
 
 			// tweetFooter.appendChild(button2);
-			divDownloadImgs.appendChild(button2);
+			dlButtonCollection.appendChild(button2);
 		}
 	}
 
@@ -2061,6 +2099,10 @@ if (typeof InstallTrigger === 'undefined')
 		divDownloadImgs.style.display = "flex";
 		tweetFooter.parentElement.insertBefore(divDownloadImgs, tweetFooter);
 
+		let emptyDiv = document.createElement('DIV');
+		emptyDiv.className = 'spacerdiv';
+		emptyDiv.style.margin = "auto";
+		divDownloadImgs.appendChild(emptyDiv);
 
 		return divDownloadImgs;
 	}
@@ -2106,7 +2148,8 @@ if (typeof InstallTrigger === 'undefined')
 					copyUrlButton.style.height = buttonSettings["CopyUrlHeight"];
 				}
 
-				copyUrlButton.style.float = "center";
+				// copyUrlButton.style.float = "center";
+				copyUrlButton.style.margin = "auto";
 
 				if (buttonSettings["CopyUrlPicture"] !== "")
 				{
@@ -2116,7 +2159,18 @@ if (typeof InstallTrigger === 'undefined')
 					copyUrlButton.appendChild(buttonImage);
 				}
 
-				divDownloadImgs.appendChild(copyUrlButton);
+
+				let dlButtonCollection = divDownloadImgs.querySelector(".dlbuttoncollection");
+				if (dlButtonCollection == null)
+				{
+					divDownloadImgs.appendChild(copyUrlButton);
+				}
+				else
+				{
+					divDownloadImgs.insertBefore(copyUrlButton, dlButtonCollection);
+				}
+
+				// divDownloadImgs.appendChild(copyUrlButton);
 			}
 		}
 	}
