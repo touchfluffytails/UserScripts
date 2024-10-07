@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.5.0
+// @version      3.5.1
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -2311,9 +2311,9 @@ if (typeof InstallTrigger === 'undefined')
 
 						if (closestListItem &&
 							closestListItem.attributes &&
-							closestListItem.attributes["role"].value == "listitem")
+							closestListItem.attributes["role"].value == "listitem" &&
+							closestListItem.attributes["data-testid"].value.toUpperCase() !== "userCell".toUpperCase())
 						{
-							// console.log("in")
 							ProcessMediaTweet(closestListItem, node);
 						}
 						//data-testid="tweetPhoto"
