@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.4.2
+// @version      3.5.0
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -571,6 +571,7 @@ if (typeof InstallTrigger === 'undefined')
 	const DefaultMediaButton1Image = " data:image/png;base64,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"
 	const mediaButtonImage = " data:image/png;base64,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";
 	const DefaultCopyUrlButtonImage = " data:image/png;base64,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"
+	const DefaultCopyUrl2ButtonImage = " data:image/png;base64,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"
 
 
 	// input_button_1_colour
@@ -601,6 +602,7 @@ if (typeof InstallTrigger === 'undefined')
 		Button1Toggle: true,
 		Button2Toggle: true,
 		CopyUrlToggle: true,
+		CopyUrlToggle2: true,
 		MediaButton1Toggle: true,
 		MediaButton2Toggle: true,
 
@@ -632,7 +634,17 @@ if (typeof InstallTrigger === 'undefined')
 		CopyUrlPicture: DefaultCopyUrlButtonImage,
 		CopyUrlWidth: "50px",
 		CopyUrlHeight: "50px",
-		CopyUrlDomain: "vxtwitter",
+		CopyUrlDomain: "fxtwitter",
+		CopyUrlSuffix: "",
+		CopyUrlPrefix: "",
+
+		CopyUrlColour2: "darkblue",
+		CopyUrlPicture2: DefaultCopyUrl2ButtonImage,
+		CopyUrlWidth2: "50px",
+		CopyUrlHeight2: "50px",
+		CopyUrlDomain2: "fxtwitter",
+		CopyUrlSuffix2: "/en",
+		CopyUrlPrefix2: "",
 	}
 
 	const SettingMapping = {
@@ -673,6 +685,17 @@ if (typeof InstallTrigger === 'undefined')
 		CopyUrlWidth: "input_button_copyurl_width",
 		CopyUrlHeight: "input_button_copyurl_height",
 		CopyUrlDomain: "input_button_copyurl_domain",
+		CopyUrlSuffix: "input_button_copyurl_suffix",
+		CopyUrlPrefix: "input_button_copyurl_prefix",
+
+		CopyUrlToggle2: "input_toggle_button_copyurl_2",
+		CopyUrlColour2: "input_button_copyurl_2_colour",
+		CopyUrlPicture2: "input_button_copyurl_2_picture",
+		CopyUrlWidth2: "input_button_copyurl_2_width",
+		CopyUrlHeight2: "input_button_copyurl_2_height",
+		CopyUrlDomain2: "input_button_copyurl_2_domain",
+		CopyUrlSuffix2: "input_button_copyurl_2_suffix",
+		CopyUrlPrefix2: "input_button_copyurl_2_prefix",
 	}
 
 	const UICheckBoxes = {
@@ -683,6 +706,7 @@ if (typeof InstallTrigger === 'undefined')
 		MediaButton1Toggle: "input_toggle_media_button_1",
 		MediaButton2Toggle: "input_toggle_media_button_2",
 		CopyUrlToggle: "input_toggle_button_copyurl",
+		CopyUrlToggle2: "input_toggle_button_copyurl_2",
 	}
 
 	const UITextBoxes = {
@@ -715,6 +739,16 @@ if (typeof InstallTrigger === 'undefined')
 		CopyUrlWidth: "input_button_copyurl_width",
 		CopyUrlHeight: "input_button_copyurl_height",
 		CopyUrlDomain: "input_button_copyurl_domain",
+		CopyUrlSuffix: "input_button_copyurl_suffix",
+		CopyUrlPrefix: "input_button_copyurl_prefix",
+
+		CopyUrlColour2: "input_button_copyurl_2_colour",
+		CopyUrlPicture2: "input_button_copyurl_2_picture",
+		CopyUrlWidth2: "input_button_copyurl_2_width",
+		CopyUrlHeight2: "input_button_copyurl_2_height",
+		CopyUrlDomain2: "input_button_copyurl_2_domain",
+		CopyUrlSuffix2: "input_button_copyurl_2_suffix",
+		CopyUrlPrefix2: "input_button_copyurl_2_prefix",
 	}
 
 	const VideoType = {
@@ -2020,7 +2054,7 @@ if (typeof InstallTrigger === 'undefined')
 		}
 	}
 
-	async function CopyTweetUrl(downloadDiv)
+	async function CopyTweetUrl(downloadDiv, buttonIndex)
 	{
 		let article = downloadDiv.closest("article")
 		if (article === null)
@@ -2047,8 +2081,14 @@ if (typeof InstallTrigger === 'undefined')
 		let tweetData = GetTweetUrlData(linkNode.href);
 
 		const buttonSettings = await GetButtonSettings();
-		const urlBase = "https://{domain}.com/{user}/status/{postid}";
-		let url = urlBase.replace("{domain}", buttonSettings["CopyUrlDomain"]).replace("{user}", tweetData["user"]).replace("{postid}", tweetData["id"]);
+
+		// Currently, there is only two hardcoded. So lazy implementations
+		const buttonDomain = buttonIndex == 1 ? buttonSettings["CopyUrlDomain"] : buttonSettings["CopyUrlDomain2"];
+		const buttonprefix = buttonIndex == 1 ? buttonSettings["CopyUrlPrefix"] : buttonSettings["CopyUrlPrefix2"];
+		const buttonsuffix = buttonIndex == 1 ? buttonSettings["CopyUrlSuffix"] : buttonSettings["CopyUrlSuffix2"];
+
+		const urlBase = "https://{prefix}{domain}.com/{user}/status/{postid}{suffix}";
+		let url = urlBase.replace("{domain}", buttonDomain).replace("{user}", tweetData["user"]).replace("{postid}", tweetData["id"]).replace("{prefix}", buttonprefix).replace("{suffix}", buttonsuffix);
 
 		// if (typeof ClipboardItem !== 'undefined')
 		// {
@@ -2123,19 +2163,33 @@ if (typeof InstallTrigger === 'undefined')
 
 		const buttonSettings = await GetButtonSettings();
 
+		let copyUrlDiv = document.createElement("div")
+		copyUrlDiv.className = "copyurlButtonCollection";
+		copyUrlDiv.style.margin = "auto";
+
+		let dlButtonCollection = divDownloadImgs.querySelector(".dlbuttoncollection");
+		if (dlButtonCollection == null)
+		{
+			divDownloadImgs.appendChild(copyUrlDiv);
+		}
+		else
+		{
+			divDownloadImgs.insertBefore(copyUrlDiv, dlButtonCollection);
+		}
+
 		if (buttonSettings["CopyUrlToggle"])
 		{
 			if (divDownloadImgs.querySelectorAll(".copyUrlButton").length === 0)
 			{
 				let copyUrlButton = document.createElement("button")
 				copyUrlButton.className = "copyUrlButton";
-				copyUrlButton.title = "Download";
+				copyUrlButton.title = "Copy Url";
 				copyUrlButton.style.backgroundColor = buttonSettings["CopyUrlColour"];
 				copyUrlButton.style.margin = "auto";
 
 				copyUrlButton.addEventListener("click", function()
 				{
-					CopyTweetUrl(divDownloadImgs);
+					CopyTweetUrl(divDownloadImgs, 1);
 				}, false);
 
 				if (buttonSettings["CopyUrlWidth"] !== "")
@@ -2159,16 +2213,70 @@ if (typeof InstallTrigger === 'undefined')
 					copyUrlButton.appendChild(buttonImage);
 				}
 
+				copyUrlDiv.appendChild(copyUrlButton);
 
-				let dlButtonCollection = divDownloadImgs.querySelector(".dlbuttoncollection");
-				if (dlButtonCollection == null)
+				// let dlButtonCollection = divDownloadImgs.querySelector(".dlbuttoncollection");
+				// if (dlButtonCollection == null)
+				// {
+				// 	divDownloadImgs.appendChild(copyUrlButton);
+				// }
+				// else
+				// {
+				// 	divDownloadImgs.insertBefore(copyUrlButton, dlButtonCollection);
+				// }
+
+				// divDownloadImgs.appendChild(copyUrlButton);
+			}
+		}
+
+		if (buttonSettings["CopyUrlToggle2"])
+		{
+			if (divDownloadImgs.querySelectorAll(".copyUrlButton2").length === 0)
+			{
+				let copyUrlButton = document.createElement("button")
+				copyUrlButton.className = "copyUrlButton2";
+				copyUrlButton.title = "Copy Url";
+				copyUrlButton.style.backgroundColor = buttonSettings["CopyUrlColour2"];
+				copyUrlButton.style.margin = "auto";
+
+				copyUrlButton.addEventListener("click", function()
 				{
-					divDownloadImgs.appendChild(copyUrlButton);
-				}
-				else
+					CopyTweetUrl(divDownloadImgs, 2);
+				}, false);
+
+				if (buttonSettings["CopyUrlWidth2"] !== "")
 				{
-					divDownloadImgs.insertBefore(copyUrlButton, dlButtonCollection);
+					copyUrlButton.style.width = buttonSettings["CopyUrlWidth2"];
+
 				}
+				if (buttonSettings["CopyUrlHeight2"] !== "")
+				{
+					copyUrlButton.style.height = buttonSettings["CopyUrlHeight2"];
+				}
+
+				// copyUrlButton.style.float = "center";
+				copyUrlButton.style.margin = "auto";
+
+				if (buttonSettings["CopyUrlPicture2"] !== "")
+				{
+					let buttonImage = document.createElement("img");
+					buttonImage.className = "copyUrlImage";
+					buttonImage.src = buttonSettings["CopyUrlPicture2"];
+					copyUrlButton.appendChild(buttonImage);
+				}
+
+
+				copyUrlDiv.appendChild(copyUrlButton);
+
+				// let dlButtonCollection = divDownloadImgs.querySelector(".dlbuttoncollection");
+				// if (dlButtonCollection == null)
+				// {
+				// 	divDownloadImgs.appendChild(copyUrlButton);
+				// }
+				// else
+				// {
+				// 	divDownloadImgs.insertBefore(copyUrlButton, dlButtonCollection);
+				// }
 
 				// divDownloadImgs.appendChild(copyUrlButton);
 			}
@@ -2443,6 +2551,50 @@ if (typeof InstallTrigger === 'undefined')
                <div>                                                                          \
               <label id="label_button_copyurl_domain">Copy Url domain</label>                       \
               <input id="input_button_copyurl_domain">                                      \
+               </div>                                                                          \
+			<div>                                                                          \
+              <label id="label_button_copyurl_suffix">Copy Url Suffix</label>                       \
+              <input id="input_button_copyurl_suffix">                                      \
+               </div>                                                                          \
+			<div>                                                                          \
+              <label id="label_button_copyurl_prefix">Copy Url Prefix</label>                       \
+              <input id="input_button_copyurl_prefix">                                      \
+               </div>                                                                          \
+                                       <div>                     \
+                          <p></p>                                  \
+                          </div>                                  \
+                                                                    \
+              <div>                                                                          \
+             <label id="label_toggle_button_copyurl_2">Enable Copy Url 2 Button</label>           \
+             <input type="checkbox" id="input_toggle_button_copyurl_2">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_2_colour">Copy Url 2 Colour</label>                       \
+             <input id="input_button_copyurl_2_colour">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_2_picture">Copy Url 2 Picture</label>                       \
+             <input id="input_button_copyurl_2_picture">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_2_width">Copy Url 2 Width</label>                       \
+             <input id="input_button_copyurl_2_width">                                      \
+              </div>                                                                          \
+              <div>                                                                          \
+             <label id="label_button_copyurl_2_height">Copy Url 2 Height</label>                       \
+             <input id="input_button_copyurl_2_height">                                      \
+              </div>                                                                          \
+               <div>                                                                          \
+              <label id="label_button_copyurl_2_domain">Copy Url 2 domain</label>                       \
+              <input id="input_button_copyurl_2_domain">                                      \
+               </div>                                                                          \
+			<div>                                                                          \
+              <label id="label_button_copyurl_2_suffix">Copy Url 2 Suffix</label>                       \
+              <input id="input_button_copyurl_2_suffix">                                      \
+               </div>                                                                          \
+			<div>                                                                          \
+              <label id="label_button_copyurl_2_prefix">Copy Url 2 Prefix</label>                       \
+              <input id="input_button_copyurl_2_prefix">                                      \
                </div>                                                                          \
              </div>                                                                         \
             '
