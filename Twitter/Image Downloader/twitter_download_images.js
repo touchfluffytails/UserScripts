@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Image Download
 // @namespace    http://tampermonkey.net/
-// @version      3.5.1
+// @version      3.5.2
 // @description  Adds a button to make downloading images from Twitter a tad bit easier.
 // @author       touchfluffytail
 // @match        https://twitter.com/*
@@ -1039,7 +1039,8 @@ if (typeof InstallTrigger === 'undefined')
 		let user;
 		let id;
 		// let userLinkNode = article.querySelector('a[role="link"');
-		let tweetTime = article.querySelector("time");
+		// console.log(article)
+		let tweetTime = article.querySelector('a[role="link"] time');
 
 		if (tweetTime !== null)
 		{
